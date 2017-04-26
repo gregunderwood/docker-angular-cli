@@ -1,0 +1,15 @@
+
+version: '2'
+
+services:
+  app:
+    image: docker-angular-cli:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 4200:4200
+    volumes:
+      - .:/docker-angular-cli
